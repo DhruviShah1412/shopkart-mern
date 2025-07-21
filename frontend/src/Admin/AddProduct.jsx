@@ -33,9 +33,7 @@ const AddProduct = () => {
     formData.append("image", image); // this is the file
 
     try {
-      await axios.post("http://localhost:8000/api/product/add",
-        formData
-      )
+      await axios.post("https://shopkart-mern-backend.onrender.com/api/product/add", formData)
 
       alert("Product is Added!!")
       fetchProduct()
@@ -74,7 +72,8 @@ const AddProduct = () => {
             <h1>
               Product Price : {item.price}
             </h1>
-            <img src={`http://localhost:8000/uploads/${item.image}`} />
+            <img src={`https://shopkart-mern-backend.onrender.com/uploads/${item.image}`} />
+
 
             <Button title="Edit" className="btn-success" />
             <Button title="Delete" className="btn-danger" />
