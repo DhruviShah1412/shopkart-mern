@@ -8,7 +8,7 @@ const ShopDetails = () => {
     const [products, setProducts] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:8000/api/product/${id}`)
+        fetch(`https://shopkart-mern-backend.onrender.com/api/product/${id}`)
             .then(response => response.json())
             .then(data => {
                 setProducts(data.product);
@@ -28,7 +28,7 @@ const ShopDetails = () => {
                 <div className="row">
                     <div className="col-6">
                         <div className="productdetail-img">
-                            <img src={`http://localhost:8000/uploads/${products.image}`} className='img-fluid' alt="" />
+                            <img src={`https://shopkart-mern-backend.onrender.com/uploads/${products.image}`} className='img-fluid' alt="" />
                         </div>
                     </div>
                     <div className="col-6">

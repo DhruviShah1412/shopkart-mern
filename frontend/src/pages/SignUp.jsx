@@ -11,7 +11,7 @@ const SignUp = () => {
         e.preventDefault()
 
         try {
-            await axios.post("http://localhost:8000/api/auth", { email, password, role:"user" })
+            await axios.post("https://shopkart-mern-backend.onrender.com/api/auth", { email, password, role:"user" })
             alert("Sigup Form is submitted!!")
              navigate('/login')
         }

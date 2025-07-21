@@ -11,7 +11,7 @@ const Login = () => {
             e.preventDefault()
     
             try {
-                const res = await axios.post("http://localhost:8000/api/auth/login", { email, password })
+                const res = await axios.post("https://shopkart-mern-backend.onrender.com/api/auth/login", { email, password })
                 alert("Login successfull!!")
 
                 localStorage.setItem("token",res.data.token)

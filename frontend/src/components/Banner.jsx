@@ -8,7 +8,7 @@ const Banner = () => {
     const handleHello = async () => {
 
         try {
-            const res = await axios.get('http://localhost:8000/hello');
+            const res = await axios.get('https://shopkart-mern-backend.onrender.com/hello');
             setHello(res.data)
         }
         catch (err) {

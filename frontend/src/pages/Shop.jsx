@@ -10,7 +10,7 @@ const Shop = () => {
 
   const fetchProduct = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/product");
+      const res = await axios.get("https://shopkart-mern-backend.onrender.com/api/product");
 
       setProducts(res.data)
     }

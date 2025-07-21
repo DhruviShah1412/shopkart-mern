@@ -16,7 +16,7 @@ const Card = ({ id, imgSrc, title, price }) => {
                             <i className="fa-solid fa-eye"></i>
                             </Link>
                         </div>
-                        <img src={`http://localhost:8000/uploads/${imgSrc}`} className="card-img-top" alt="..." />
+                        <img src={`https://shopkart-mern-backend.onrender.com/uploads/${imgSrc}`} className="card-img-top" alt="..." />
                     </div>
                     <div className="card-body">
                         <div className="product-card">
