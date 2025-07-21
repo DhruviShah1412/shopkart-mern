@@ -23,6 +23,10 @@ app.get('/hello', (req, res) => {
 app.use('/api/auth', authRoutes)
 app.use('/api/product', productRoutes)
 
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
