@@ -10,7 +10,7 @@ const AddProduct = () => {
   const [product, setProduct] = useState()
   const fetchProduct = async () => {
     try {
-      const res = await axios.get("https://shopkart-mern-backend.onrender.com/api/product");
+      const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/product`);
 
       setProduct(res.data)
     }
@@ -33,7 +33,7 @@ const AddProduct = () => {
     formData.append("image", image); // this is the file
 
     try {
-      await axios.post("https://shopkart-mern-backend.onrender.com/api/product/add", formData)
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/api/product/add`, formData)
 
       alert("Product is Added!!")
       fetchProduct()
@@ -72,7 +72,7 @@ const AddProduct = () => {
             <h1>
               Product Price : {item.price}
             </h1>
-            <img src={`https://shopkart-mern-backend.onrender.com/uploads/${item.image}`} />
+            <img src={`${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`} />
 
 
             <Button title="Edit" className="btn-success" />

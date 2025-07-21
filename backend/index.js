@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 8000;
@@ -9,7 +10,7 @@ const productRoutes = require('./routes/product')
 app.use(cors())
 app.use(express.json())
 app.use('/uploads', express.static('uploads'));
-mongoose.connect("mongodb+srv://ddshah14124:Dhruvi%404569@cluster0.940rhve.mongodb.net/")    .then(() => {
+mongoose.connect(process.env.MONGO_URI)    .then(() => {
         console.log("Mongoose Connection is Done!!!")
     })
     .catch((err) => {
